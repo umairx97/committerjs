@@ -1,27 +1,15 @@
-# Airtable Record UUID Generator
-Generate airtable record uuid from cli or by requiring it in node.
-Inspired by [Cuid](https://github.com/ericelliott/cuid)
+# CommitterJS
+Node script that creates commits based on time range
 ## Usage:
 
 if NPM >= 5.0
-```javascript
-npx airtable-uuid
-```
-OR
-```javascript
-npm i -g airtable-uuid 
-airtable-uuid // recl2mht2j000VGSD - Output
+```bash
+npx committerjs \
+--year="2021" \   # optional - current year used as default
+--from="01/01" \  # month/date
+--to="03/03"      # month/date
 ```
 
-## Example 
-```javascript
-const { generate, isRecordId } = require('airtable-uuid');
-
-const uuid = generate() 
-
-console.log(uuid) // recl2mht2j000VGSD
-console.log(isRecordId(uuid)) // true
-```
-
+**Note**: Uses the folder git config, so make sure those are correctly set up, after running the script just `git push` 
 ## Author:
 [umairx97](https://github.com/umairx97)
