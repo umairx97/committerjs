@@ -1,6 +1,6 @@
 {
   "name": "committerjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node script that creates commits based on time range",
   "main": "index.js",
   "repository": {

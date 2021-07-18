@@ -3,9 +3,11 @@ const dates = require('minimist')(process.argv)
 const _ = require('lodash')
 const { execSync } = require('child_process')
 
+const from = dates.f || dates.from
+const to = dates.t || dates.to
 const year = dates.year || new Date().getFullYear()
-const startDate = new Date(`${year}-${dates.from}`)
-const endDate = new Date(`${year}-${dates.to}`)
+const startDate = new Date(`${year}-${from}`)
+const endDate = new Date(`${year}-${to}`)
 
 const diffDays = getDateDiffInDays(startDate, endDate)
 const commitDate = startDate
